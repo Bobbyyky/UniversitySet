@@ -1,14 +1,25 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context="com.example.pokestar.universityset.Fragment.SchoolFragment">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.example.pokestar.universityset.Fragment.SchoolFragment">
 
-    <TextView
-    android:id="@+id/school_container"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="高校test"
-    android:layout_gravity="center"/>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/school_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="#00c8ff"
+        app:tabSelectedTextColor="#0357d6"
+        app:tabTextColor="#FF000000"
+        app:tabMode="scrollable"
+        app:tabGravity="center"/>
 
-</FrameLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/school_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
